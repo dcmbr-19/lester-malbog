@@ -70,8 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
     </article>`;
 
   if (previewGrid) {
-    const featured = PORTFOLIO_ITEMS.filter(i => i.featured).slice(0, 3);
-    const items = featured.length ? featured : PORTFOLIO_ITEMS.slice(0, 3);
+    const featured = PORTFOLIO_ITEMS.filter(i => i.featured).slice(0, 5);
+    const items = featured.length ? featured : PORTFOLIO_ITEMS.slice(0, 5);
     previewGrid.innerHTML = items.map(cardHTML).join('');
   }
 
