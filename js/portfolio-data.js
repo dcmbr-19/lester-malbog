@@ -24,7 +24,7 @@ const PORTFOLIO_ITEMS = [
     title: "Elite Electrical Maintenance & Airconditioning",
     category: "Elementor",
     summary: "Lead-gen site for a Brisbane electrical, aircon and solar company, with service-area pages and a $0-call-out-fee quote flow.",
-    image: "images/elite-electrical.png",
+    image: "images/elite-electrical.webp",
     url: "https://eliteema.com.au/",
     featured: true
   },
@@ -32,7 +32,7 @@ const PORTFOLIO_ITEMS = [
     title: "Playdates Augusta",
     category: "Elementor",
     summary: "Booking-driven site for an indoor kids' play café, with membership pricing, waiver sign-up and gift card sales built in.",
-    image: "images/playdatesaugusta.com.png",
+    image: "images/playdatesaugusta.com.webp",
     url: "https://playdatesaugusta.com/",
     featured: true
   },
@@ -40,7 +40,7 @@ const PORTFOLIO_ITEMS = [
     title: "American Roofing",
     category: "Elementor",
     summary: "Veteran-owned roofing contractor site covering residential, commercial and storm-damage services across a dozen Georgia service areas.",
-    image: "images/theamericanpro.com.png",
+    image: "images/theamericanpro.com.webp",
     url: "https://theamericanpro.com/",
     featured: true
   },
@@ -48,7 +48,7 @@ const PORTFOLIO_ITEMS = [
     title: "TapClicks",
     category: "Front-End",
     summary: "Front-end pages for an AI marketing intelligence platform, covering product tiers, industry solutions and case studies.",
-    image: "images/tapclicks.com.png",
+    image: "images/tapclicks.com.webp",
     url: "https://www.tapclicks.com/",
     featured: true
   },
@@ -56,7 +56,7 @@ const PORTFOLIO_ITEMS = [
     title: "Concept II Kitchen & Bath",
     category: "Front-End",
     summary: "Design-build studio site with a five-phase process walkthrough, product catalog and project portfolio.",
-    image: "images/concept-kitchen.png",
+    image: "images/concept-kitchen.webp",
     url: "https://www.concept-ii.com/",
     featured: true
   },
@@ -64,7 +64,7 @@ const PORTFOLIO_ITEMS = [
     title: "Leone Alato USA",
     category: "Front-End",
     summary: "Importer site for a 25+ producer Italian wine and spirits portfolio, with regional producer pages and a distributor network.",
-    image: "images/leonealato.png",
+    image: "images/leonealato.webp",
     url: "https://www.leonealatousa.com/",
     featured: false
   },
@@ -72,7 +72,7 @@ const PORTFOLIO_ITEMS = [
     title: "The Adirondack Guys",
     category: "Front-End",
     summary: "Showroom site for a poly-lumber outdoor furniture retailer, with brand catalogs, a gallery and appointment requests.",
-    image: "images/adirondak.png",
+    image: "images/adirondak.webp",
     url: "https://www.adirondackguys.com/",
     featured: false
   },
@@ -80,7 +80,7 @@ const PORTFOLIO_ITEMS = [
     title: "Monroe County Sheriff's Office",
     category: "Front-End",
     summary: "Public-facing government site organizing four bureaus, community resources and public-safety information for county residents.",
-    image: "images/monroecounty.png",
+    image: "images/monroecounty.webp",
     url: "https://www.monroecountysheriff-ny.gov/",
     featured: false
   },
@@ -88,7 +88,7 @@ const PORTFOLIO_ITEMS = [
     title: "Hartleigh Monroe Beauty & Boutique",
     category: "Front-End",
     summary: "Boutique hair salon site with services, stylist profiles and gift card sales for a Pittsford, NY studio.",
-    image: "images/hartleighmonroe.png",
+    image: "images/hartleighmonroe.webp",
     url: "https://www.hartleighmonroe.com/",
     featured: false
   },
@@ -96,7 +96,7 @@ const PORTFOLIO_ITEMS = [
     title: "Oakes Tree Service",
     category: "Front-End",
     summary: "Local service site for a Rochester-area tree removal company, with service pages, an estimate form and 24/7 emergency messaging.",
-    image: "images/oakestree.png",
+    image: "images/oakestree.webp",
     url: "https://www.oakestreeservice.com/",
     featured: false
   },
@@ -104,7 +104,7 @@ const PORTFOLIO_ITEMS = [
     title: "Napora Heating Cooling Plumbing",
     category: "Front-End",
     summary: "HVAC and plumbing company site covering heating, cooling, water heaters and emergency service across the Rochester area.",
-    image: "images/naporaheating.png",
+    image: "images/naporaheating.webp",
     url: "https://www.naporaheating.com/",
     featured: false
   },
@@ -112,7 +112,7 @@ const PORTFOLIO_ITEMS = [
     title: "Tracy Riley Counseling",
     category: "Front-End",
     summary: "Practice site for a Jacksonville counseling and hypnotherapy group, with service pages for every clinician and specialty.",
-    image: "images/tracyriley.png",
+    image: "images/tracyriley.webp",
     url: "https://www.tracyriley.com/",
     featured: false
   },
@@ -120,7 +120,7 @@ const PORTFOLIO_ITEMS = [
     title: "Savoia Pastry Shoppe",
     category: "Front-End",
     summary: "E-commerce site for a Rochester bakery since 1929, with online ordering, wedding cake galleries and nationwide shipping.",
-    image: "images/savoia.png",
+    image: "images/savoia.webp",
     url: "https://www.savoiapastry.com/",
     featured: false
   },
@@ -128,7 +128,7 @@ const PORTFOLIO_ITEMS = [
     title: "RMH Point of Sale",
     category: "Front-End",
     summary: "B2B software site for a retail POS platform, covering 20+ industry verticals, integrations and partner resources.",
-    image: "images/retailmanagement.png",
+    image: "images/retailmanagement.webp",
     url: "https://www.rmhpos.com/",
     featured: false
   },
@@ -136,7 +136,7 @@ const PORTFOLIO_ITEMS = [
     title: "Evolution Marketing",
     category: "Front-End",
     summary: "Agency site covering website development, digital marketing and creative services for a Rochester marketing firm.",
-    image: "images/evolutionmarketing.png",
+    image: "images/evolutionmarketing.webp",
     url: "https://www.evolutionmarketing.com/",
     featured: false
   },
@@ -144,7 +144,7 @@ const PORTFOLIO_ITEMS = [
     title: "Brittany Woods Townhomes",
     category: "Front-End",
     summary: "Leasing site for an upscale Webster, NY townhome community, with floor plans, amenities and a photo gallery.",
-    image: "images/brittanywoods.png",
+    image: "images/brittanywoods.webp",
     url: "https://www.brittanywoodstownhomes.com/",
     featured: false
   },
@@ -152,7 +152,7 @@ const PORTFOLIO_ITEMS = [
     title: "Ivy Bridge Townhomes",
     category: "Front-End",
     summary: "Leasing site for a Gates, NY luxury townhome community, with four floor-plan options and resident portal access.",
-    image: "images/ivybridge.png",
+    image: "images/ivybridge.webp",
     url: "https://www.ivybridgetownhomes.com/",
     featured: false
   },
@@ -160,7 +160,7 @@ const PORTFOLIO_ITEMS = [
     title: "King's Crossing Townhomes",
     category: "Front-End",
     summary: "Leasing site for a North Chili, NY townhouse community, with floor plans, amenities and a resident portal.",
-    image: "images/kingscrossing.png",
+    image: "images/kingscrossing.webp",
     url: "https://www.kingscrossing-townhomes.com/",
     featured: false
   }
