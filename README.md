@@ -45,3 +45,36 @@ Save the file — both the homepage preview and `portfolio.html` update automati
 - **Colors**: all defined as CSS variables at the top of `css/style.css` under `:root`.
 - **Copy**: edit directly in `index.html` and `portfolio.html`.
 - **Contact info**: search for the email/phone in both HTML files and the footer to update in one pass.
+
+## Language toggle (English / Japanese)
+
+The site includes a built-in EN / JA switch — no page reload, no separate
+Japanese copy of the site to maintain.
+
+- **UI**: a pill-shaped radio toggle in the nav (`EN` / `JA`), styled to
+  match the existing olive design system.
+- **Engine**: `js/i18n.js` holds all translated strings in one
+  `TRANSLATIONS` object (`en` and `ja`) and swaps text across the page
+  based on `data-i18n`, `data-i18n-html`, and `data-i18n-attr` attributes
+  already added to `index.html` and `portfolio.html`.
+- **Persistence**: the chosen language is saved in `localStorage`, so it
+  stays selected as visitors move between pages.
+- **Portfolio data**: `js/portfolio-data.js` includes a `summary_ja`
+  field alongside the existing English `summary` for each project.
+  `js/main.js` picks whichever matches the active language when
+  rendering the portfolio grid, and re-renders automatically when the
+  toggle is switched (via the `owa:langchange` event).
+
+### Adding a new translated string
+
+1. Add `data-i18n="my.key"` (or `data-i18n-html="my.key"` if the text
+   contains a nested tag like `<span>` or `&amp;`) to the HTML element.
+2. Add `'my.key': '...'` to **both** the `en` and `ja` blocks in
+   `js/i18n.js`.
+
+### Adding a new page
+
+Load `js/i18n.js` before `js/main.js`, mark up translatable text with
+`data-i18n` attributes, and add the corresponding keys to the
+dictionary — everything else (persistence, the toggle UI, live
+re-rendering) is already wired up.

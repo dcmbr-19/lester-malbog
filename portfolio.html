@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio — Lesster Malbog</title>
-<meta name="description" content="A look at Olive Web Agency's recent website builds across WordPress, Elementor, Beaver Builder, Divi and GoHighLevel.">
+<title data-i18n="portfolio.meta.title">Portfolio — Lesster Malbog</title>
+<meta name="description" data-i18n-attr="content:portfolio.meta.description" content="A look at Olive Web Agency's recent website builds across WordPress, Elementor, Beaver Builder, Divi and GoHighLevel.">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="css/style.css">
 </head>
@@ -17,24 +17,35 @@
       <span class="brand-word">Lester <em>Malbog</em></span>
     </a>
     <ul class="nav-links">
-      <li><a href="index.html#services">Services</a></li>
-      <li><a href="index.html#about">About</a></li>
-      <li><a href="portfolio.html" class="active">Portfolio</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="index.html#services" data-i18n="nav.services">Services</a></li>
+      <li><a href="index.html#about" data-i18n="nav.about">About</a></li>
+      <li><a href="portfolio.html" class="active" data-i18n="nav.portfolio">Portfolio</a></li>
+      <li><a href="index.html#contact" data-i18n="nav.contact">Contact</a></li>
     </ul>
-    <a href="index.html#contact" class="nav-cta">Start a project</a>
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+
+    <div class="nav-actions">
+      <div class="lang-switch" role="radiogroup" aria-label="Language / 言語">
+        <input type="radio" id="lang-en" name="site-lang" value="en" checked>
+        <label for="lang-en">EN</label>
+        <input type="radio" id="lang-ja" name="site-lang" value="ja">
+        <label for="lang-ja">JA</label>
+        <span class="lang-thumb" aria-hidden="true"></span>
+      </div>
+
+      <a href="index.html#contact" class="nav-cta" data-i18n="nav.cta">Start a project</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </nav>
 
 <header class="page-hero">
   <div class="wrap">
-    <p class="eyebrow">PORTFOLIO</p>
-    <h1>Builds, by platform.</h1>
-    <p class="section-lede" style="margin-left:auto;margin-right:auto;text-align:center;">Filter by the platform each site was built on. New builds get added here as they launch.</p>
-    <p class="section-lede" style="margin-left:auto;margin-right:auto;text-align:center;"><em>Most Websites in Front-End are assited by A.W.E.</em></p>
+    <p class="eyebrow" data-i18n="portfolio.eyebrow">PORTFOLIO</p>
+    <h1 data-i18n="portfolio.h1">Builds, by platform.</h1>
+    <p class="section-lede" style="margin-left:auto;margin-right:auto;text-align:center;" data-i18n="portfolio.lede1">Filter by the platform each site was built on. New builds get added here as they launch.</p>
+    <p class="section-lede" style="margin-left:auto;margin-right:auto;text-align:center;"><em data-i18n="portfolio.lede2">Most Websites in Front-End are assited by A.W.E.</em></p>
   </div>
 </header>
 
@@ -48,11 +59,11 @@
 <section class="section tint" id="contact">
   <div class="wrap">
     <div class="cta-band reveal">
-      <h2>Like what you see?</h2>
-      <p>Let's talk about your build — new site, migration, or a fix for something that isn't working right.</p>
+      <h2 data-i18n="portfolio.cta.title">Like what you see?</h2>
+      <p data-i18n="portfolio.cta.lede">Let's talk about your build — new site, migration, or a fix for something that isn't working right.</p>
       <div class="btn-row" style="justify-content:center;">
-        <a href="mailto:lester.malbog@gmail.com" class="btn btn-primary">Email lester.malbog@gmail.com</a>
-        <a href="tel:+639541860413" class="btn btn-ghost">Call +63 954 186 0413</a>
+        <a href="mailto:lester.malbog@gmail.com" class="btn btn-primary"><span data-i18n="contact.email">Email</span> lester.malbog@gmail.com</a>
+        <a href="tel:+639541860413" class="btn btn-ghost"><span data-i18n="contact.call">Call</span> +63 954 186 0413</a>
       </div>
     </div>
   </div>
@@ -66,35 +77,36 @@
           <img src="assets/logo.svg" alt="Olive Web Agency mark">
           <span class="brand-word">Lester <em>Malbog</em></span>
         </a>
-        <p>Web design and development — WordPress, Elementor, Beaver Builder, Divi and GoHighLevel — from Figma to launch.</p>
+        <p data-i18n="footer.tagline">Web design and development — WordPress, Elementor, Beaver Builder, Divi and GoHighLevel — from Figma to launch.</p>
       </div>
       <div class="footer-cols">
         <div class="footer-col">
-          <h4>Site</h4>
+          <h4 data-i18n="footer.site">Site</h4>
           <ul>
-            <li><a href="index.html#services">Services</a></li>
-            <li><a href="index.html#about">About</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="index.html#services" data-i18n="nav.services">Services</a></li>
+            <li><a href="index.html#about" data-i18n="nav.about">About</a></li>
+            <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Contact</h4>
+          <h4 data-i18n="footer.contact">Contact</h4>
           <ul>
             <li><a href="mailto:lester.malbog@gmail.com">lester.malbog@gmail.com</a></li>
             <li><a href="tel:+639541860413">+63 954 186 0413</a></li>
-            <li>San Manuel, Tarlac, Philippines</li>
+            <li data-i18n="footer.address">San Manuel, Tarlac, Philippines</li>
           </ul>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 All rights reserved.</span>
-      <span>Designed &amp; built by Lester Malbog.</span>
+      <span data-i18n="footer.rights">&copy; 2026 All rights reserved.</span>
+      <span data-i18n="footer.builtby">Designed &amp; built by Lester Malbog.</span>
     </div>
   </div>
 </footer>
 
 <script src="js/portfolio-data.js"></script>
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

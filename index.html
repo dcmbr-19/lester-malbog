@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lester Malbog</title>
-<meta name="description" content="Olive Web Agency builds fast, responsive WordPress, Elementor, Divi and GoHighLevel websites — from Figma design to launch, backed by 14+ years of hands-on development.">
+<title data-i18n="meta.title">Lester Malbog</title>
+<meta name="description" data-i18n-attr="content:meta.description" content="Olive Web Agency builds fast, responsive WordPress, Elementor, Divi and GoHighLevel websites — from Figma design to launch, backed by 14+ years of hands-on development.">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="css/style.css">
 </head>
@@ -17,26 +17,37 @@
       <span class="brand-word">Lester Malbog</span>
     </a>
     <ul class="nav-links">
-      <li><a href="index.html#services">Services</a></li>
-      <li><a href="index.html#about">About</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="index.html#services" data-i18n="nav.services">Services</a></li>
+      <li><a href="index.html#about" data-i18n="nav.about">About</a></li>
+      <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li>
+      <li><a href="index.html#contact" data-i18n="nav.contact">Contact</a></li>
     </ul>
-    <a href="index.html#contact" class="nav-cta">Start a project</a>
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+
+    <div class="nav-actions">
+      <div class="lang-switch" role="radiogroup" aria-label="Language / 言語">
+        <input type="radio" id="lang-en" name="site-lang" value="en" checked>
+        <label for="lang-en">EN</label>
+        <input type="radio" id="lang-ja" name="site-lang" value="ja">
+        <label for="lang-ja">JA</label>
+        <span class="lang-thumb" aria-hidden="true"></span>
+      </div>
+
+      <a href="index.html#contact" class="nav-cta" data-i18n="nav.cta">Start a project</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </nav>
 
 <header class="hero">
   <div class="wrap">
-    <p class="eyebrow">Following JESUS and building Websites.</p>
-    <h1>Websites, <span class="accent">built right.</span></h1>
-    <p class="hero-sub">14+ years turning Figma and PSD designs into fast, responsive, SEO-ready sites in pure HTML, CSS, JS and on WordPress, Elementor, Beaver Builder, Divi and GoHighLevel.</p>
+    <p class="eyebrow" data-i18n="hero.eyebrow">Following JESUS and building Websites.</p>
+    <h1><span data-i18n="hero.title1">Websites, </span><span class="accent" data-i18n="hero.title2">built right.</span></h1>
+    <p class="hero-sub" data-i18n="hero.sub">14+ years turning Figma and PSD designs into fast, responsive, SEO-ready sites in pure HTML, CSS, JS and on WordPress, Elementor, Beaver Builder, Divi and GoHighLevel.</p>
     <div class="btn-row">
-      <a href="index.html#contact" class="btn btn-primary">Start a project</a>
-      <a href="portfolio.html" class="btn btn-ghost">See the work</a>
+      <a href="index.html#contact" class="btn btn-primary" data-i18n="hero.cta1">Start a project</a>
+      <a href="portfolio.html" class="btn btn-ghost" data-i18n="hero.cta2">See the work</a>
     </div>
 
     <div class="hero-visual reveal">
@@ -62,7 +73,7 @@
 
 <section class="trust">
   <div class="wrap trust-inner">
-    <span class="trust-label">Built for teams at</span>
+    <span class="trust-label" data-i18n="trust.label">Built for teams at</span>
     <span class="trust-item">We Get You Leads</span>
     <span class="trust-item">Markets.com</span>
     <span class="trust-item">Evolution Marketing</span>
@@ -74,9 +85,9 @@
 <section class="section" id="services">
   <div class="wrap">
     <div class="section-head reveal">
-      <p class="eyebrow">SERVICES</p>
-      <h2 class="section-title">Everything a site needs, one developer deep.</h2>
-      <p class="section-lede">From first Figma frame to a live, QA'd, search-ready page — no handoffs, no guesswork.</p>
+      <p class="eyebrow" data-i18n="services.eyebrow">SERVICES</p>
+      <h2 class="section-title" data-i18n="services.title">Everything a site needs, one developer deep.</h2>
+      <p class="section-lede" data-i18n="services.lede">From first Figma frame to a live, QA'd, search-ready page — no handoffs, no guesswork.</p>
     </div>
     <div class="service-grid">
 
@@ -84,48 +95,48 @@
         <div class="service-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         </div>
-        <h3>WordPress &amp; Elementor</h3>
-        <p>Custom builds and ongoing maintenance on WordPress, using Elementor for flexible, client-editable pages.</p>
+        <h3 data-i18n-html="services.1.title">WordPress &amp; Elementor</h3>
+        <p data-i18n="services.1.desc">Custom builds and ongoing maintenance on WordPress, using Elementor for flexible, client-editable pages.</p>
       </div>
 
       <div class="service-card reveal">
         <div class="service-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M3 9h18" stroke="currentColor" stroke-width="2"/></svg>
         </div>
-        <h3>Beaver Builder &amp; Divi</h3>
-        <p>Page-builder sites migrated, rebuilt, or maintained with an eye on responsiveness and load speed.</p>
+        <h3 data-i18n-html="services.2.title">Beaver Builder &amp; Divi</h3>
+        <p data-i18n="services.2.desc">Page-builder sites migrated, rebuilt, or maintained with an eye on responsiveness and load speed.</p>
       </div>
 
       <div class="service-card reveal">
         <div class="service-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 12a8 8 0 1 1 16 0 8 8 0 0 1-16 0Z" stroke="currentColor" stroke-width="2"/><path d="M12 8v4l3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         </div>
-        <h3>GoHighLevel Funnels</h3>
-        <p>Full sites and marketing funnels built in GoHighLevel, extended with custom HTML, CSS and JavaScript.</p>
+        <h3 data-i18n="services.3.title">GoHighLevel Funnels</h3>
+        <p data-i18n="services.3.desc">Full sites and marketing funnels built in GoHighLevel, extended with custom HTML, CSS and JavaScript.</p>
       </div>
 
       <div class="service-card reveal">
         <div class="service-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <h3>Front-End Development</h3>
-        <p>Hand-coded HTML, CSS, JavaScript and jQuery for anything a builder can't do — Bootstrap and Tailwind included.</p>
+        <h3 data-i18n="services.4.title">Front-End Development</h3>
+        <p data-i18n="services.4.desc">Hand-coded HTML, CSS, JavaScript and jQuery for anything a builder can't do — Bootstrap and Tailwind included.</p>
       </div>
 
       <div class="service-card reveal">
         <div class="service-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M21 21l-4.3-4.3M18 11a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         </div>
-        <h3>QA &amp; SEO</h3>
-        <p>Cross-device, cross-browser testing and documented test cases, plus on-page SEO best practices baked in.</p>
+        <h3 data-i18n-html="services.5.title">QA &amp; SEO</h3>
+        <p data-i18n="services.5.desc">Cross-device, cross-browser testing and documented test cases, plus on-page SEO best practices baked in.</p>
       </div>
 
       <div class="service-card reveal">
         <div class="service-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 20l4-1 10-10-3-3L5 16l-1 4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
         </div>
-        <h3>Figma &amp; PSD to Live</h3>
-        <p>Pixel-accurate conversion of Figma, PSD and AI design files into responsive, production-ready pages.</p>
+        <h3 data-i18n="services.6.title">Figma &amp; PSD to Live</h3>
+        <p data-i18n="services.6.desc">Pixel-accurate conversion of Figma, PSD and AI design files into responsive, production-ready pages.</p>
       </div>
 
     </div>
@@ -135,14 +146,14 @@
 <section class="section tint">
   <div class="wrap">
     <div class="section-head center reveal">
-      <p class="eyebrow">TRACK RECORD</p>
-      <h2 class="section-title">Fourteen years of shipping real sites.</h2>
+      <p class="eyebrow" data-i18n="track.eyebrow">TRACK RECORD</p>
+      <h2 class="section-title" data-i18n="track.title">Fourteen years of shipping real sites.</h2>
     </div>
     <div class="stats reveal">
-      <div class="stat"><div class="num">14+</div><div class="label">Years in web development</div></div>
-      <div class="stat"><div class="num">10+</div><div class="label">Agencies &amp; teams worked with</div></div>
-      <div class="stat"><div class="num">5</div><div class="label">CMS &amp; builder platforms</div></div>
-      <div class="stat"><div class="num">2</div><div class="label">Active client roles today</div></div>
+      <div class="stat"><div class="num">14+</div><div class="label" data-i18n="track.stat1">Years in web development</div></div>
+      <div class="stat"><div class="num">10+</div><div class="label" data-i18n-html="track.stat2">Agencies &amp; teams worked with</div></div>
+      <div class="stat"><div class="num">5</div><div class="label" data-i18n-html="track.stat3">CMS &amp; builder platforms</div></div>
+      <div class="stat"><div class="num">2</div><div class="label" data-i18n="track.stat4">Active client roles today</div></div>
     </div>
   </div>
 </section>
@@ -150,36 +161,36 @@
 <section class="section" id="about">
   <div class="wrap">
     <div class="section-head reveal">
-      <p class="eyebrow">ABOUT</p>
-      <h2 class="section-title">Where the experience comes from.</h2>
-      <p class="section-lede">A working history across agencies, in-house teams, and direct client support — not just tutorials.</p>
+      <p class="eyebrow" data-i18n="about.eyebrow">ABOUT</p>
+      <h2 class="section-title" data-i18n="about.title">Where the experience comes from.</h2>
+      <p class="section-lede" data-i18n="about.lede">A working history across agencies, in-house teams, and direct client support — not just tutorials.</p>
     </div>
 
     <div class="timeline reveal">
       <div class="timeline-item">
-        <p class="when">2026 — Present</p>
-        <h3>Website Developer, <span>Australian Institute Marketing Dynamics &amp; Marketing 1</span></h3>
-        <p>Building and maintaining client sites in GoHighLevel and WordPress/Elementor, from Figma design through custom post types and on-page SEO — with Claude AI woven into the build workflow.</p>
+        <p class="when" data-i18n="about.tl1.when">2026 — Present</p>
+        <h3 data-i18n-html="about.tl1.title">Website Developer, <span>Australian Institute Marketing Dynamics &amp; Marketing 1</span></h3>
+        <p data-i18n="about.tl1.desc">Building and maintaining client sites in GoHighLevel and WordPress/Elementor, from Figma design through custom post types and on-page SEO — with Claude AI woven into the build workflow.</p>
       </div>
       <div class="timeline-item">
-        <p class="when">2025 — 2026</p>
-        <h3>Senior Web Developer, <span>We Get You Leads</span></h3>
-        <p>Built Elementor websites from Figma designs, ran post-build QA, set up Google Analytics and applied SEO best practices across a steady stream of client projects.</p>
+        <p class="when" data-i18n="about.tl2.when">2025 — 2026</p>
+        <h3 data-i18n-html="about.tl2.title">Senior Web Developer, <span>We Get You Leads</span></h3>
+        <p data-i18n="about.tl2.desc">Built Elementor websites from Figma designs, ran post-build QA, set up Google Analytics and applied SEO best practices across a steady stream of client projects.</p>
       </div>
       <div class="timeline-item">
-        <p class="when">2023 — 2024</p>
-        <h3>Website QA Engineer, <span>Markets.com</span></h3>
-        <p>Tested site and trading-platform functionality daily across web and mobile, verified multi-language content, and logged detailed test cases for dev and CMS teams.</p>
+        <p class="when" data-i18n="about.tl3.when">2023 — 2024</p>
+        <h3 data-i18n-html="about.tl3.title">Website QA Engineer, <span>Markets.com</span></h3>
+        <p data-i18n="about.tl3.desc">Tested site and trading-platform functionality daily across web and mobile, verified multi-language content, and logged detailed test cases for dev and CMS teams.</p>
       </div>
       <div class="timeline-item">
-        <p class="when">2021 — 2023</p>
-        <h3>Front-End Web Developer, <span>Evolution Marketing</span></h3>
-        <p>Converted Figma, PSD and AI files into responsive pages, including e-commerce sites, and kept client blogs populated and maintained.</p>
+        <p class="when" data-i18n="about.tl4.when">2021 — 2023</p>
+        <h3 data-i18n-html="about.tl4.title">Front-End Web Developer, <span>Evolution Marketing</span></h3>
+        <p data-i18n="about.tl4.desc">Converted Figma, PSD and AI files into responsive pages, including e-commerce sites, and kept client blogs populated and maintained.</p>
       </div>
       <div class="timeline-item">
-        <p class="when">2010 — 2021</p>
-        <h3>Earlier roles — <span>Digital Assets, EMAPTA, Dizon Interactive &amp; more</span></h3>
-        <p>Landing pages, WordPress and SquareUp site management, logo and graphic design, and direct customer support — the foundation everything since has built on.</p>
+        <p class="when" data-i18n="about.tl5.when">2010 — 2021</p>
+        <h3 data-i18n-html="about.tl5.title">Earlier roles — <span>Digital Assets, EMAPTA, Dizon Interactive &amp; more</span></h3>
+        <p data-i18n="about.tl5.desc">Landing pages, WordPress and SquareUp site management, logo and graphic design, and direct customer support — the foundation everything since has built on.</p>
       </div>
     </div>
   </div>
@@ -188,12 +199,12 @@
 <section class="section tint">
   <div class="wrap">
     <div class="section-head reveal">
-      <p class="eyebrow">TOOLKIT</p>
-      <h2 class="section-title">Comfortable across the whole stack.</h2>
+      <p class="eyebrow" data-i18n="toolkit.eyebrow">TOOLKIT</p>
+      <h2 class="section-title" data-i18n="toolkit.title">Comfortable across the whole stack.</h2>
     </div>
 
     <div class="reveal">
-      <p class="skill-group-title">CMS &amp; page builders</p>
+      <p class="skill-group-title" data-i18n-html="toolkit.group1">CMS &amp; page builders</p>
       <div class="skills-grid">
         <div class="skill-chip"><span class="dot"></span>WordPress</div>
         <div class="skill-chip"><span class="dot"></span>Elementor</div>
@@ -204,7 +215,7 @@
         <div class="skill-chip"><span class="dot"></span>Sparkzio</div>
       </div>
 
-      <p class="skill-group-title">Front-end</p>
+      <p class="skill-group-title" data-i18n="toolkit.group2">Front-end</p>
       <div class="skills-grid">
         <div class="skill-chip"><span class="dot"></span>HTML &amp; CSS</div>
         <div class="skill-chip"><span class="dot"></span>JavaScript / jQuery</div>
@@ -214,14 +225,14 @@
         <div class="skill-chip"><span class="dot"></span>SASS / BEM</div>
       </div>
 
-      <p class="skill-group-title">QA, SEO &amp; design</p>
+      <p class="skill-group-title" data-i18n-html="toolkit.group3">QA, SEO &amp; design</p>
       <div class="skills-grid">
-        <div class="skill-chip"><span class="dot"></span>Website QA</div>
-        <div class="skill-chip"><span class="dot"></span>SEO best practices</div>
+        <div class="skill-chip"><span class="dot"></span><span data-i18n="toolkit.chip.qa">Website QA</span></div>
+        <div class="skill-chip"><span class="dot"></span><span data-i18n="toolkit.chip.seo">SEO best practices</span></div>
         <div class="skill-chip"><span class="dot"></span>Figma</div>
         <div class="skill-chip"><span class="dot"></span>Adobe Photoshop</div>
         <div class="skill-chip"><span class="dot"></span>Adobe Illustrator</div>
-        <div class="skill-chip"><span class="dot"></span>Client support</div>
+        <div class="skill-chip"><span class="dot"></span><span data-i18n="toolkit.chip.support">Client support</span></div>
       </div>
     </div>
   </div>
@@ -230,11 +241,11 @@
 <section class="section tint" id="contact">
   <div class="wrap">
     <div class="cta-band reveal">
-      <h2>Have a site that needs building — or fixing?</h2>
-      <p>Whether it's a new build from Figma, a broken Elementor page, or a WordPress site that needs real attention, I can take it from here.</p>
+      <h2 data-i18n="contact.title">Have a site that needs building — or fixing?</h2>
+      <p data-i18n="contact.lede">Whether it's a new build from Figma, a broken Elementor page, or a WordPress site that needs real attention, I can take it from here.</p>
       <div class="btn-row" style="justify-content:center;">
-        <a href="mailto:lester.malbog@gmail.com" class="btn btn-primary">Email lester.malbog@gmail.com</a>
-        <a href="tel:+639541860413" class="btn btn-ghost">Call +63 954 186 0413</a>
+        <a href="mailto:lester.malbog@gmail.com" class="btn btn-primary"><span data-i18n="contact.email">Email</span> lester.malbog@gmail.com</a>
+        <a href="tel:+639541860413" class="btn btn-ghost"><span data-i18n="contact.call">Call</span> +63 954 186 0413</a>
       </div>
     </div>
   </div>
@@ -248,35 +259,36 @@
           <img src="assets/logo.svg" alt="Olive Web Agency mark">
           <span class="brand-word">Lester <em>Malbog</em></span>
         </a>
-        <p>Web design and development — WordPress, Elementor, Beaver Builder, Divi and GoHighLevel — from Figma to launch.</p>
+        <p data-i18n="footer.tagline">Web design and development — WordPress, Elementor, Beaver Builder, Divi and GoHighLevel — from Figma to launch.</p>
       </div>
       <div class="footer-cols">
         <div class="footer-col">
-          <h4>Site</h4>
+          <h4 data-i18n="footer.site">Site</h4>
           <ul>
-            <li><a href="index.html#services">Services</a></li>
-            <li><a href="index.html#about">About</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="index.html#services" data-i18n="nav.services">Services</a></li>
+            <li><a href="index.html#about" data-i18n="nav.about">About</a></li>
+            <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Contact</h4>
+          <h4 data-i18n="footer.contact">Contact</h4>
           <ul>
             <li><a href="mailto:lester.malbog@gmail.com">lester.malbog@gmail.com</a></li>
             <li><a href="tel:+639541860413">+63 954 186 0413</a></li>
-            <li>San Manuel, Tarlac, Philippines</li>
+            <li data-i18n="footer.address">San Manuel, Tarlac, Philippines</li>
           </ul>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 All rights reserved.</span>
-      <span>Designed &amp; built by Lester Malbog.</span>
+      <span data-i18n="footer.rights">&copy; 2026 All rights reserved.</span>
+      <span data-i18n="footer.builtby">Designed &amp; built by Lester Malbog.</span>
     </div>
   </div>
 </footer>
 
 <script src="js/portfolio-data.js"></script>
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

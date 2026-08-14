@@ -156,6 +156,66 @@ p{ margin: 0; }
 }
 .nav-cta:hover{ background: var(--olive-900); }
 
+.nav-actions{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* ---------- Language toggle ---------- */
+
+.lang-switch{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  background: var(--tint-deep);
+  border-radius: 999px;
+  padding: 3px;
+  height: 30px;
+  flex-shrink: 0;
+}
+.lang-switch input[type="radio"]{
+  position: absolute;
+  opacity: 0;
+  width: 1px; height: 1px;
+  pointer-events: none;
+}
+.lang-switch label{
+  position: relative;
+  z-index: 1;
+  width: 34px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--gray);
+  cursor: pointer;
+  border-radius: 999px;
+  transition: color .2s var(--ease);
+  user-select: none;
+}
+.lang-switch input:checked + label{ color: #fff; }
+.lang-thumb{
+  position: absolute;
+  top: 3px; left: 3px;
+  width: 34px;
+  height: 24px;
+  background: var(--olive-700);
+  border-radius: 999px;
+  transition: transform .25s var(--ease);
+  z-index: 0;
+}
+.lang-switch input#lang-ja:checked ~ .lang-thumb{
+  transform: translateX(34px);
+}
+.lang-switch input:focus-visible + label{
+  outline: 2px solid var(--olive-600);
+  outline-offset: 2px;
+}
+
 .nav-toggle{
   display: none;
   background: none;
@@ -652,6 +712,7 @@ p{ margin: 0; }
   }
   .nav-cta{ display: none; }
   .nav-toggle{ display: block; }
+  .nav-actions{ gap: 10px; }
 
   .service-grid{ grid-template-columns: 1fr; }
   .skills-grid{ grid-template-columns: 1fr 1fr; }

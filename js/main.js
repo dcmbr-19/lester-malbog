@@ -41,15 +41,35 @@ document.addEventListener('DOMContentLoaded', () => {
     revealEls.forEach(el => el.classList.add('in'));
   }
 
-  /* ---- Portfolio rendering ---- */
+  /* ---- Portfolio rendering (language-aware) ---- */
   const previewGrid = document.querySelector('[data-portfolio-preview]');
   const fullGrid = document.querySelector('[data-portfolio-full]');
   const filterRow = document.querySelector('[data-portfolio-filters]');
 
   if (typeof PORTFOLIO_ITEMS === 'undefined') return;
 
-  const cardHTML = (item) => `
-    <article class="portfolio-card reveal">
+  // Current filter is tracked outside the render functions so switching
+  // language mid-filter doesn't reset the visitor back to "All".
+  let activeFilter = 'All';
+
+  // Falls back to owaGetLang()/owaT() from js/i18n.js when present, so
+  // this file still works standalone (e.g. before i18n.js is added).
+  const lang = () => (typeof owaGetLang === 'function' ? owaGetLang() : 'en');
+  const t = (key) => (typeof owaT === 'function' ? owaT(key, lang()) : key);
+
+  const categoryLabel = (category) => {
+    if (lang() === 'ja') {
+      return t('portfolio.category.' + category) !== 'portfolio.category.' + category
+        ? t('portfolio.category.' + category)
+        : category;
+    }
+    return category;
+  };
+
+  const cardHTML = (item) => {
+    const summary = (lang() === 'ja' && item.summary_ja) ? item.summary_ja : item.summary;
+    return `
+    <article class="portfolio-card reveal in">
       <div class="portfolio-thumb">
         ${item.image
           ? `<img src="${item.image}" alt="${item.title} screenshot" loading="lazy">`
@@ -60,45 +80,61 @@ document.addEventListener('DOMContentLoaded', () => {
              </span>`}
       </div>
       <div class="portfolio-body">
-        <span class="portfolio-tag">${item.category}</span>
+        <span class="portfolio-tag">${categoryLabel(item.category)}</span>
         <h3>${item.title}</h3>
-        <p>${item.summary}</p>
+        <p>${summary}</p>
         <a class="portfolio-link" href="${item.url}" target="_blank" rel="noopener">
-          View build <span class="arrow">&rarr;</span>
+          ${t('portfolio.card.viewBuild')} <span class="arrow">&rarr;</span>
         </a>
       </div>
     </article>`;
+  };
 
-  if (previewGrid) {
+  const renderPreview = () => {
+    if (!previewGrid) return;
     const featured = PORTFOLIO_ITEMS.filter(i => i.featured).slice(0, 5);
     const items = featured.length ? featured : PORTFOLIO_ITEMS.slice(0, 5);
     previewGrid.innerHTML = items.map(cardHTML).join('');
+  };
+
+  const renderFull = (list) => {
+    if (!fullGrid) return;
+    fullGrid.innerHTML = list.length
+      ? list.map(cardHTML).join('')
+      : `<div class="portfolio-empty">${t('portfolio.card.empty')}</div>`;
+  };
+
+  const renderFilters = () => {
+    if (!filterRow) return;
+    const categories = ['All', ...new Set(PORTFOLIO_ITEMS.map(i => i.category))];
+    filterRow.innerHTML = categories.map((c) => {
+      const label = c === 'All' ? t('portfolio.filter.all') : categoryLabel(c);
+      const isActive = c === activeFilter ? ' active' : '';
+      return `<button class="filter-btn${isActive}" data-filter="${c}">${label}</button>`;
+    }).join('');
+  };
+
+  const renderPortfolio = () => {
+    renderPreview();
+    renderFilters();
+    renderFull(activeFilter === 'All' ? PORTFOLIO_ITEMS : PORTFOLIO_ITEMS.filter(i => i.category === activeFilter));
+  };
+
+  if (filterRow) {
+    filterRow.addEventListener('click', (e) => {
+      const btn = e.target.closest('.filter-btn');
+      if (!btn) return;
+      activeFilter = btn.dataset.filter;
+      renderPortfolio();
+    });
   }
 
-  if (fullGrid) {
-    const renderFull = (list) => {
-      fullGrid.innerHTML = list.length
-        ? list.map(cardHTML).join('')
-        : `<div class="portfolio-empty">No builds in this category yet — add one in <code>js/portfolio-data.js</code>.</div>`;
-      fullGrid.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
-    };
+  // Initial render (language may already be resolved by i18n.js's own
+  // DOMContentLoaded listener — script order in the HTML guarantees
+  // js/i18n.js runs first, so owaGetLang() is accurate here).
+  renderPortfolio();
 
-    renderFull(PORTFOLIO_ITEMS);
-
-    if (filterRow) {
-      const categories = ['All', ...new Set(PORTFOLIO_ITEMS.map(i => i.category))];
-      filterRow.innerHTML = categories.map((c, i) =>
-        `<button class="filter-btn${i === 0 ? ' active' : ''}" data-filter="${c}">${c}</button>`
-      ).join('');
-
-      filterRow.addEventListener('click', (e) => {
-        const btn = e.target.closest('.filter-btn');
-        if (!btn) return;
-        filterRow.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const f = btn.dataset.filter;
-        renderFull(f === 'All' ? PORTFOLIO_ITEMS : PORTFOLIO_ITEMS.filter(i => i.category === f));
-      });
-    }
-  }
+  // Re-render with translated summaries/labels whenever the visitor
+  // flips the EN/JA toggle.
+  document.addEventListener('owa:langchange', renderPortfolio);
 });
